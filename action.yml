@@ -1,0 +1,15 @@
+name: 'MTConnect Version Comparator'
+branding:
+  icon: 'check'
+  color: 'green'
+description: 'Compares the latest release version of the MTConnect SysML model against the input version string.'
+inputs:
+  version:
+    description: 'semantic version string to compare against.'
+    required: true
+outputs:
+  update_available: # output will be available to future steps
+    description: 'Flag for whether or not there appears to be a major or minor update available.'
+runs:
+  using: 'node16'
+  main: 'index.js'
