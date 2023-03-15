@@ -1,0 +1,63 @@
+{
+  "name": "compare-version",
+  "version": "1.0.0",
+  "description": "Compares the latest release version of the MTConnect SysML model against the input version string.",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint 'src/**.js' 'tests/**.js' --fix",
+    "test": "eslint 'src/**.js' 'tests/**.js' && jest --coverage",
+    "build": "ncc build src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtconnect/compare-version-action.git"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "mtconnect"
+  ],
+  "author": "MTConnect",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mtconnect/compare-version-action/issues"
+  },
+  "homepage": "https://github.com/mtconnect/compare-version-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^5.1.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.4",
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.10",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "prettier": "^2.7.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/get-release.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && git add dist/"
+    }
+  }
+}
