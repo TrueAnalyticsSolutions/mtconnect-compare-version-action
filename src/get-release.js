@@ -34,4 +34,4 @@ async function getRelease() {
   }
 }
 
-model.export = getRelease;
+module.exports = getRelease;
