@@ -1,5 +1,5 @@
 {
-  "name": "compare-version",
+  "name": "tams-mtconnect-compare-version",
   "version": "1.0.0",
   "description": "Compares the latest release version of the MTConnect SysML model against the input version string.",
   "main": "dist/index.js",
@@ -10,19 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mtconnect/compare-version-action.git"
+    "url": "git+https://github.com/TrueAnalyticsSolutions/mtconnect-compare-version-action.git"
   },
   "keywords": [
     "actions",
     "node",
-    "mtconnect"
+    "mtconnect",
+    "tams"
   ],
-  "author": "MTConnect",
+  "author": "TAMS",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mtconnect/compare-version-action/issues"
+    "url": "https://github.com/TrueAnalyticsSolutions/mtconnect-compare-version-action/issues"
   },
-  "homepage": "https://github.com/mtconnect/compare-version-action#readme",
+  "homepage": "https://github.com/TrueAnalyticsSolutions/mtconnect-compare-version-action#readme",
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/exec": "^1.1.1",
